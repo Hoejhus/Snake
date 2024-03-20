@@ -1,0 +1,31 @@
+:root {
+  --cell-size: 20px; 
+  --board-size: 30; 
+  --snake-color: #4CAF50;
+  --apple-color: #F44336;
+  --background-color: #333; 
+  --cell-border-color: #474747;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(var(--board-size), var(--cell-size));
+  grid-gap: 1px; 
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: var(--background-color);
+  border: 1px solid var(--cell-border-color);
+}
+
+.player {
+  background-color: var(--snake-color);
+}
+
+.goal {
+  background-color: var(--apple-color);
+}
